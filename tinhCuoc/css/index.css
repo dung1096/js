@@ -1,0 +1,169 @@
+html {
+  font-size: 16px;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.contact__map iframe {
+  height: 100%;
+}
+
+.contact__calc h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.contact__calc h2 {
+  font-size: 2rem;
+}
+
+.contact__calc ul li {
+  position: relative;
+}
+
+.contact__calc ul li input[type='radio'] {
+  display: none;
+}
+
+.contact__calc ul li label {
+  font-size: 1.35em;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.contact__calc ul li label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: 0;
+  margin: 0 10px 0 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: transparent;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact__calc ul li label:hover {
+  color: #7e4240;
+}
+
+.contact__calc ul li label:hover::before {
+  border-color: #7e4240;
+}
+
+.contact__calc ul li input[type=radio]:checked ~ label {
+  color: #d5ae3a;
+}
+
+.contact__calc ul li input[type=radio]:checked ~ label::before {
+  border-color: #d5ae3a;
+}
+
+.contact__calc ul li input[type=radio]:checked ~ label:after {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  content: " ";
+  display: block;
+  background: #d5ae3a;
+}
+
+.contact__form__title {
+  margin: 20px auto;
+  position: relative;
+}
+
+.contact__form__title span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, #884747, #e0c04d);
+  -webkit-transition: linear 0.4s;
+  transition: linear 0.4s;
+}
+
+.contact__form__title input {
+  border: transparent;
+  position: relative;
+  border-bottom: 2px solid #dbdbdb;
+  font-size: 22px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact__form__title input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+  border: transparent;
+}
+
+.contact__form__title input:focus ~ span::after {
+  width: 100%;
+}
+
+.contact__form button {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  min-width: 244px;
+  height: 50px;
+}
+
+.contact__form button .btn-calc {
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  z-index: 8;
+}
+
+.contact__form button .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(-135deg, #884747, #e0c04d, #884747, #e0c04d);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.contact__form button:hover .overlay {
+  left: 0;
+}
+/*# sourceMappingURL=index.css.map */
