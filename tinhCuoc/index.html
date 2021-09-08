@@ -6,19 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Uber</title>
 </head>
 
 <body>
-    <section class="content container-fluid">
-
+    <section class="contact container-fluid p-0 d-flex">
+        <div class="contact__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1003449.6852539227!2d106.13469869341657!3d10.755639034903153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2zSOG7kyBDaMOtIE1pbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1630812566624!5m2!1svi!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="contact__calc container-fluid">
+            <h1 class="text-center">Tính cước uber</h1>
+            <h2>Vui lòng chọn loại xe:</h2>
+            <ul>
+                <li class="d-flex align-items-center">
+                    <input type="radio" id="uberX" value="1" name="selector">
+                    <label for="uberX">UberX</label>
+                </li>
+                <li class="d-flex align-items-center">
+                    <input type="radio" id="uberSUV" value="2" name="selector">
+                    <label for="uberSUV">UberSUV</label>
+                </li>
+                <li class="d-flex align-items-center">
+                    <input type="radio" id="uberBlack" value="3" name="selector">
+                    <label for="uberBlack">UberBlack</label>
+                </li>
+            </ul>
+            <form class="contact__form">
+                <div class="contact__form__title">
+                    <h2>Nhập vào số km:</h2>
+                    <input type="text" class="form-control" id="km">
+                    <span></span>
+                </div>
+                <div class="contact__form__title">
+                    <h2>Nhập thời gian chờ (phút):</h2>
+                    <input type="text" class="form-control" id="waitingTime">
+                    <span></span>
+                </div>
+                <button class="btn" type="button" onclick=main()>
+                    <div class="btn-calc">
+                        Tính tiền
+                    </div>
+                    <div class="overlay"></div>
+                </button>
+                <button class="btn" type="button" disabled>
+                    <div class="btn-calc">
+                        In hóa đơn
+                    </div>
+                    <div class="overlay"></div>
+                </button>
+                <div id="priceTotal" style="visibility: hidden;font-size: 32px;">Tổng tiền: <span id="price"></span>
+                </div>
+            </form>
+        </div>
     </section>
     <!-- JS BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
