@@ -6,14 +6,16 @@
 //   1. Lấy thông tin từ object hiển thỉ màn hình
 //   @output object sv
 
+
 const render = () => {
+    //lấy dữ kiệu từ form
     let id = document.getElementById("txtID").value;
     let name = document.getElementById("txtName").value;
     let type = document.getElementById("txtType").value;
     let math = document.getElementById("txtMath").value;
     let physic = document.getElementById("txtPhysic").value;
     let chemistry = document.getElementById("txtChemistry").value;
-
+    //đối tượng sinh viên
     let student = {
         id: id,
         name: name,
@@ -42,6 +44,7 @@ const render = () => {
         },
     }
 
+    //hiển thị dữ liệu ra table
     document.getElementById("tableContent").innerHTML = `
     <tr>
         <td>${student.id}</td>
