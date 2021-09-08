@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Điểm sinh viên</title>
+</head>
+
+<body>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-10 col-lg-6 mx-auto">
+                <h3 class="text-center">Quản lý sinh viên</h3>
+                <form action="">
+                    <div class="my-3">
+                        <label for="txtID">Mã sinh viên:</label>
+                        <input type="text" class="form-control" id="txtID">
+                    </div>
+                    <div class="my-3">
+                        <label for="txtName">Tên sinh viên:</label>
+                        <input type="text" class="form-control" id="txtName">
+                    </div>
+                    <div class="my-3">
+                        <label for="txtType">Loại sinh viên:</label>
+                        <select name="" id="txtType" class="form-select">
+                            <option>Khó khăn</option>
+                            <option>Thường</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="my-3">
+                                <label for="txtMath">Điểm toán:</label>
+                                <input type="text" class="form-control" id="txtMath">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="my-3">
+                                <label for="txtPhysic">Điểm lý:</label>
+                                <input type="text" class="form-control" id="txtPhysic">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="my-3">
+                                <label for="txtChemistry">Điểm hóa:</label>
+                                <input type="text" class="form-control" id="txtChemistry">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center my-3">
+                        <button type="button" class="btn btn-success" onclick="render()">Xác nhận</button>
+                    </div>
+                </form>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Mã sinh viên</th>
+                            <th>Tên sinh viên</th>
+                            <th>Loại sinh viên</th>
+                            <th>Điểm trung bình</th>
+                            <th>Xếp loại</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableContent"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
