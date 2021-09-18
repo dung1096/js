@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Giỏ hàng</title>
+    <style>
+        p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <h2>Mua hàng online</h2>
+        <select id="selectSort">
+            <option value="0">--Sắp xếp--</option>
+            <option value="1">Sort A->Z</option>
+            <option value="2">Sort Z->A</option>
+        </select>
+
+        <select id="selectFilter">
+            <option value="0">--Chọn hãng--</option>
+            <option value="1">Iphone</option>
+            <option value="2">Samsung</option>
+            <option value="3">Oppo</option>
+            <option value="4">Xiaomi</option>
+            <option value="5">Nokia</option>
+        </select>
+        <div class="row mx-0" id="productList"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng cộng</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Tổng tiền: </td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- JS AXIOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <!-- JS -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
