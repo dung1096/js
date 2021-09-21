@@ -94,6 +94,7 @@ const handleFilter = (list) => {
 }
 //--------------------------------------------
 //Thêm
+
 const handleAdd = () => {
     const id = document.getElementById("id").value;
     const name = document.getElementById("name").value;
@@ -117,6 +118,19 @@ const handleAdd = () => {
         frontCamera,
         type
     );
+
+    let validation = new Validation();
+    let valid =
+        validation.checkSpace(id, ".idError") &&
+        validation.checkNum(id, ".id-numError") &&
+        validation.checkLength(id, 2, 6, ".id-lengthError") &&
+        validation.checkSpace(name, ".nameError") &&
+        validation.checkSpace(price, ".priceError") && 
+        validation.checkNum(price, ".price-numError") &&
+        validation.checkSelect(document.getElementById("type").value, ".typeError");
+    if (!valid) {
+        return;
+    }
 
     axios({
         url: "https://5bd2959ac8f9e400130cb7e9.mockapi.io/api/products",

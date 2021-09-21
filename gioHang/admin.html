@@ -30,45 +30,54 @@
 
         <div class="row" id="productList"></div>
 
-        <form>
+        <form class="pb-5">
             <div class="row">
-                <div class="my-2 col-6">
+                <div class="col-6">
+                    <span class="text-danger idError id-lengthError id-numError" style="display: block;height: 25px;"></span>
                     <input type="text" id="id" class="form-control" placeholder="ID" />
                 </div>
-                <div class="my-2 col-6">
+                <div class="col-6">
+                    <span class="text-danger nameError" style="display: block;height: 25px;"></span>
                     <input type="text" id="name" class="form-control" placeholder="Name" />
                 </div>
 
-                <div class="my-2 col-6">
+                <div class="col-6">
+                    <span class="text-danger screenError" style="display: block;height: 25px;"></span>
                     <input type="text" id="screen" class="form-control" placeholder="Screen" />
                 </div>
 
-                <div class="my-2 col-6">
+                <div class="col-6">
+                    <span class="text-danger backCameraError" style="display: block;height: 25px;"></span>
                     <input type="text" id="backCamera" class="form-control" placeholder="Back Camera" />
                 </div>
 
-                <div class="my-2 col-6">
+                <div class="col-6">
+                    <span class="text-danger frontCameraError" style="display: block;height: 25px;"></span>
                     <input type="text" id="frontCamera" class="form-control" placeholder="Front Camera" />
                 </div>
 
-                <div class="my-2 col-6">
+                <div class="col-6">
+                    <span class="text-danger priceError price-numError" style="display: block;height: 25px;"></span>
                     <input type="text" id="price" class="form-control" placeholder="Price" />
                 </div>
 
-                <div class="my-2 col-12">
+                <div class="col-12">
+                    <span class="text-danger imgError" style="display: block;height: 25px;"></span>
                     <input type="text" class="form-control" id="img" placeholder="Image" />
                 </div>
 
-                <!-- <div class="my-2 col-12">
+                <!-- <div class="col-12">
                     <label>Select single image file</label>
                     <input type="file" class="form-control" id="img" />
                 </div> -->
 
-                <div class="my-2 col-12">
+                <div class="col-12">
+                    <span class="text-danger descError" style="display: block;height: 25px;"></span>
                     <textarea id="desc" class="form-control" placeholder="Description"></textarea>
                 </div>
 
-                <div class="my-2 col-6">
+                <div class="col-6 mb-5">
+                    <span class="text-danger typeError" style="display: block;height: 25px;"></span>
                     <select id="type">
                         <option value="0">--Chọn hãng--</option>
                         <option value="1">Iphone</option>
@@ -83,22 +92,6 @@
             <input type="button" value="Add" id="btnAdd" class="btn btn-success" onclick="handleAdd()" />
             <input type="button" value="Update" id="btnUpdate" class="btn btn-info" style="display: none;" onclick="handleUpdate()" />
             <button type="reset" value="Reset" id="btnReset" class="btn btn-warning">Reset</button>
-
-
-
-            <div id="loadFile" class="container"></div>
-            <tbody id="tbCartShow" class="text-center"></tbody>
-
-            <!-- 
-                  <input
-                    type="button"
-                    value="Cập nhật"
-                    id="btnUpdate"
-                    style="display: none;"
-                    class="btn btn-info btn-block"
-                    onclick=" handleUpdateEmployee();"
-                  />
-                   -->
         </form>
     </div>
 
@@ -108,6 +101,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
     <!-- JS -->
     <script src="./js/product.js"></script>
+    <script src="./js/validation.js"></script>
     <script src="./js/admin.js"></script>
 </body>
 
