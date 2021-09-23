@@ -15,6 +15,12 @@
             -webkit-line-clamp: 1;
             overflow: hidden;
         }
+        
+        th,
+        td {
+            text-align: center;
+            width: 20%;
+        }
     </style>
 </head>
 
@@ -44,16 +50,17 @@
                     <th>Giá</th>
                     <th>Số lượng</th>
                     <th>Tổng cộng</th>
+                    <th></th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="cart"></tbody>
             <tfoot>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td>Tổng tiền: </td>
-                    <td></td>
+                    <td id="total"></td>
                 </tr>
             </tfoot>
         </table>
@@ -63,6 +70,7 @@
     <!-- JS AXIOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
     <!-- JS -->
+    <script src="./js/product.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
